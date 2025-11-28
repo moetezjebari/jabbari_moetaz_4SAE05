@@ -5,7 +5,8 @@ FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
 # Copy your JAR file
-COPY target/student-management.jar app.jar
+COPY target/student-management-0.0.1-SNAPSHOT.jar app.jar
+
 
 # Expose port if your app runs a server
 EXPOSE 8080
