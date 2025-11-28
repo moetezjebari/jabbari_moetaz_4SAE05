@@ -1,14 +1,14 @@
-# Use official Eclipse Temurin (Adoptium) Java 17 JDK on Alpine
-FROM eclipse-temurin:17-jdk-alpine
+# Image Java compatible ARM64 (Mac M1)
+FROM eclipse-temurin:17-jdk-jammy
 
 # Set working directory
 WORKDIR /app
 
-# Copy your Maven-built jar into the image
+# Copy your JAR file
 COPY target/student-management.jar app.jar
 
-# Expose port if your app runs a server (optional)
+# Expose port if your app runs a server
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
